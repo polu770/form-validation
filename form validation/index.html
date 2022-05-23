@@ -1,0 +1,84 @@
+<!-- Data Validation
+Data validation is the process of ensuring that user input is clean, correct, and useful.
+
+Typical validation tasks are:
+
+has the user filled in all required fields?
+has the user entered a valid date?
+has the user entered text in a numeric field?
+Most often, the purpose of data validation is to ensure correct user input.
+
+Validation can be defined by many different methods, and deployed in many different ways.
+
+Server side validation is performed by a web server, after input has been sent to the server.
+
+Client side validation is performed by a web browser, before input is sent to a web server. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <table>
+    <tr>
+           <td>
+     <form aciton ="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post" ">
+        <div class="formdesign" id="name">
+            Name: <br> <input type="text" name="fname" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="email">
+            Email: <br> <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+        </div>
+
+        <div class="formdesign" id="phone">
+            Phone: <br> <input type="phone" name="fphone" required><b><span class="formerror"></span></b>
+        </div>
+
+        <div class="formdesign" id="pass">
+            Password: <br> <input type="password" name="fpass" required><b><span class="formerror"</span></b>
+        </div>
+
+        <div class="formdesign" id="cpass">
+            Confirm Password: <br> <input type="password" name="fcpass" required><b><span class="formerror"></span></b>
+        </div>
+
+        <input class="but" type="submit" value="Submit">
+    </td>
+    <td>
+        
+        <h2 id="guides">Guides:</h2>
+        <br> for name: <br>
+           •name should not contain any number of special characters. <br>
+           •the minimum length for name is 3 and maximum is 30 characters. <br>
+
+    
+        <br> for phone: <br>
+           •phone number will always be of 10 digits <br>
+           •it will start with 7 or 8 or 9 <br>
+
+        <br>  for password: <br>
+           •minimum length is 8 characters and maximum length is 16 characters<br>
+           •it should contain atleast one number,one special character,one uppercase,one lowercase character <br>
+    </td>
+    </tr>
+
+    </form>
+    
+
+</table>
+    
+</body>
+<script src="index.js"></script>
+
+</html>
